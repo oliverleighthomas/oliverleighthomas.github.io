@@ -1,7 +1,7 @@
 ### your site title here
 
 title: Oliver Thomas
-description: C## Programmer
+description: C++ Programmer
 
 #baseurl: /gradfolio #name of GitHub repository
 url: "https://oliverleighthomas.github.io/" #custom url to be used instead of GitHub repository
@@ -13,8 +13,8 @@ permalink: /blog/:year/:title/
 paginate_path: /blog/page:num/
 
 # Social media links in footer
-linkedin: "#"
-github: "#"
+linkedin: "oliver-thomas-872bb71b4"
+github: "oliverleighthomas"
 
 # Markdown
 highlighter: rouge
