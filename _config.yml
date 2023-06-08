@@ -1,10 +1,10 @@
 ### your site title here
 
-title: Your Name
-description: subtitle | affiliations | motto
+title: Oliver Thomas
+description: C## Programmer
 
-baseurl: /gradfolio #name of GitHub repository
-url: "" #custom url to be used instead of GitHub repository
+#baseurl: /gradfolio #name of GitHub repository
+url: "https://oliverleighthomas.github.io/" #custom url to be used instead of GitHub repository
 email: #
 
 # Pagination
@@ -13,16 +13,8 @@ permalink: /blog/:year/:title/
 paginate_path: /blog/page:num/
 
 # Social media links in footer
-twitter: "#"
 linkedin: "#"
-stackoverflow: "#"
 github: "#"
-researchgate: "#"
-orcid: "#"
-quora: "#"
-instagram: "#"
-facebook: "#"
-
 
 # Markdown
 highlighter: rouge
