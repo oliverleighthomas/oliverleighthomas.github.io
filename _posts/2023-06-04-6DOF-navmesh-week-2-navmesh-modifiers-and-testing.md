@@ -19,7 +19,8 @@ I began by creating an algorithm to determine what percentage of an octant was o
 
 I began with a naive implementation of the algorithm. If an octant was found to be occupied, I divided that octant into ten divisions along each axis, so one thousand parts total. A collision shape was created for each part, and then checked for intersection with the collision shapes of the overlapping actors within the octant. If an intersection was found, I incremented a tally of all occupied sub-octants. After going through all sub-octants, I divided this value by the total number of sub-octants (in this case, one thousand) and then multiplied by one hundred to determine the percentage of the octant that actually contained overlapping actors. This percentage was then returned. Within my subdivision method, I would check that percentage against a user-defined threshhold (in my testing, I used 80%), and only subdivided further if it was not met.
 
-![Test](https://i.imgur.com/UiEs0TM.png "")
+![Test](https://i.imgur.com/roq2LLW.png "The outline of a cube in an empty game level.")
+![Test](https://i.imgur.com/UiEs0TM.png)
 
 After implementing my algorithm, I ran a test to see how much faster it was. First, I created a navmesh without utilizing my new algorithm:
 
