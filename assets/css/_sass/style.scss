@@ -45,29 +45,26 @@ a {
 
 
 p a {
-  color: $text-color;
-  text-decoration: none;
-  background: -webkit-linear-gradient(transparent 90%, lighten($brand-color, 10%) 10%);
-  background: -moz-linear-gradient(transparent 90%, lighten($brand-color, 10%) 10%);
-  background: linear-gradient(transparent 90%, lighten($brand-color, 10%) 10%);
+    color: $text-color;
+    text-decoration: none;
+    background: -webkit-linear-gradient(transparent 90%, lighten($brand-color, 10%) 10%);
+    background: -moz-linear-gradient(transparent 90%, lighten($brand-color, 10%) 10%);
+    background: linear-gradient(transparent 90%, lighten($brand-color, 10%) 10%);
+    -webkit-box-shadow: inset 0 0 0 0 lighten($brand-color, 10%);
+    box-shadow: inset 0 0 0 0 lighten($brand-color, 10%);
+    -webkit-transition: box-shadow ease 1s;
+    -moz-transition: box-shadow ease 1s;
+    transition: box-shadow ease 1s;
 
-  -webkit-box-shadow: inset 0 0 0 0 lighten($brand-color, 10%);
-  box-shadow: inset 0 0 0 0 lighten($brand-color, 10%);
+    &:hover {
+        color: lighten($text-color, 50%);
+        -webkit-box-shadow: inset 0 -100px 0 0 lighten($brand-color, 10%);
+        box-shadow: inset 0 -100px 0 0 lighten($brand-color, 10%);
+    }
 
-
-  -webkit-transition: box-shadow ease 1s;
-  -moz-transition: box-shadow ease 1s;
-  transition: box-shadow ease 1s;
-  &:hover {
-    color: lighten($background-color, 50%);
-    -webkit-box-shadow: inset 0 -100px 0 0 lighten($brand-color, 10%);
-    box-shadow: inset 0 -100px 0 0 lighten($brand-color, 10%);
-
-  }
-
-  @media (prefers-color-scheme: dark) {
-    color: $text-color-dark;
-  }
+    @media (prefers-color-scheme: dark) {
+        color: $text-color-dark;
+    }
 }
 
 
