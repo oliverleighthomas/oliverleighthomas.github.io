@@ -11,7 +11,9 @@ After consulting with my advisor, I realized that ensuring my navmesh was optomi
 
 ### Optimization
 
-The strategy I decided to implement to start was the check whether octants were entirely occupied and, if so, cease further subdivision. The remaining two strategies&mdashmulti-threading and lazy-loading of collision data&mdashrequired a bit more work to set up, but for this particular strategy, I already had everything I needed.
+The strategy I decided to implement to start was the check whether octants were entirely occupied and, if so, cease further subdivision. The remaining two strategies &mdash; multi-threading and lazy-loading of collision data
+&mdash;
+required a bit more work to set up, but for this particular strategy, I already had everything I needed.
 
 I began by creating an algorithm to determine what percentage of an octant was occupied. Unreal's collision shapes are binary in nature (either they are occupied or empty) and do not store any information about the extent of their occupancy, so I needed to find my own way of gathering this information.
 
