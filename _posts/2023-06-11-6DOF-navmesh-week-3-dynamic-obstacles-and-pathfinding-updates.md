@@ -8,9 +8,9 @@ Hello, and welcome to the latest update on my six-degree-of-freedom navmesh! Thi
 ### Dynamic Obstacles
 
 The plan for this week was to implement the stretch goal of dynamic obstacle handling. After doing some research and considering my options, I identified three potential strategies:
-1 - Collision checks on the octants involved in a pathfinding task: I realized that I did not need to know how the collision of an area far away from an agent was changing, as it would not affect the relevant agent. I only needed to know if the path the agent was trying to navigate was changed.
-2 - Collision checks around dynamic obstacles: Instead of querying the entire navmesh for changes, I had the idea of only querying around actors I knew would move. However, the issue I ran into here was how I would know what obstacles I should track. There is a "dynamic" collsion channel for objects in Unreal I could utilize, but I did not want to limit users in what collision channels they used with my navmesh.
-3 - Manually flag dynamic obstacles: While this would resolve the issues with the previous option, it required more effort on the user's part. I felt this might be burdonsome, especially for games with many different dynamic meshes, and I wanted to keep my navmesh user-friendly.
+1. Collision checks on the octants involved in a pathfinding task: I realized that I did not need to know how the collision of an area far away from an agent was changing, as it would not affect the relevant agent. I only needed to know if the path the agent was trying to navigate was changed.
+2. Collision checks around dynamic obstacles: Instead of querying the entire navmesh for changes, I had the idea of only querying around actors I knew would move. However, the issue I ran into here was how I would know what obstacles I should track. There is a "dynamic" collsion channel for objects in Unreal I could utilize, but I did not want to limit users in what collision channels they used with my navmesh.
+3. Manually flag dynamic obstacles: While this would resolve the issues with the previous option, it required more effort on the user's part. I felt this might be burdonsome, especially for games with many different dynamic meshes, and I wanted to keep my navmesh user-friendly.
 
 Ultimately, I went with option one. I modified my pathfinding algorithm so it would store all the octants an agent would travel through in an array. Within my tick function, I would go through that array and check for any changes in collision of those octants. If any were detected, the octant would be re-subdivided.
 
@@ -57,6 +57,7 @@ Initially I spent some time attempting to address all the different edge cases o
 However, this revealed another edge case, which I had read about in the [paper mentioned in my last blog post](http://www.gameaipro.com/GameAIPro3/GameAIPro3_Chapter21_3D_Flight_Navigation_Using_Sparse_Voxel_Octrees.pdf). When an octant's neighbor is at a higher level of subdivision, there are actually several neighboring octants. In the following illistration, the octant "13" has only one neighbor, "2", beneath it, but four neighbors, "6", "10", "12", and a fourth hidden one, to its right.
 
 ![Test](https://i.imgur.com/9E1fzUr.png)
+
 [Image credit](https://www.semanticscholar.org/paper/Neighbor-finding-in-images-represented-by-octrees-Samet/d14d6d92d44929386f0c6dc1e710d0cbdccf564e)
 
 To account for this, I added another recursive function to get all the children neighbors from a specific direction. As the children are all created in the same order, the indices of specific children within a parent are the same. For example, the bottom-right child is always index 0 within the "children" array of a parent. I iterated through the children at these indicies, check if they themselves had children, called the function again on those if so, and then added the highest-level children to the neighbors array.
