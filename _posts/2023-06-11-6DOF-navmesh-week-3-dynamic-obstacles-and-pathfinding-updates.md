@@ -14,15 +14,9 @@ The plan for this week was to implement the stretch goal of dynamic obstacle han
 
 Ultimately, I went with option one. I modified my pathfinding algorithm so it would store all the octants an agent would travel through in an array. Within my tick function, I would go through that array and check for any changes in collision of those octants. If any were detected, the octant would be re-subdivided.
 
-Week two of my 6DOF navmesh project has concluded, and I am very excited about my progress! This week, I was finally able to see my work in action.
-
-The objective for this week was to create navmesh modifiers that would mark certain areas as of higher cost, so users could create areas to be avoided in their environments. In addition, I wanted to create a basic pathfinding algorithm that utilized my navmesh to navigate around obstacles in order to reach designated goal points. However, I decided to start this week by implementing one of the optimization strategies I discussed in my previous post.
-
-After consulting with my advisor, I realized that ensuring my navmesh was optomized before testing began in a production environment should be a priority. I was already encountering issues with speed in a small testing space, which could mean the navmesh wasn't yet usuable in a full project. After planning out my tasks for this week, I concluded I had the time to implement one of the three optimization strategies I had identified.
-
 ![Test](https://i.imgur.com/c1cSXso.png)
 
-I successfully implemented this system and tested it with my temporary pathfinding algorithm. However, the initial tests revealed an issue with my navmesh (EMDASH) Parent octants, after detecting collision but before subdividing themselves further, would mark themselves as "non-navigable." This could make it so agents couldn't navigate to octants with navigable children, as the octants themselves would be considered inaccessible.
+I successfully implemented this system and tested it with my temporary pathfinding algorithm. However, the initial tests revealed an issue with my navmesh &mdash; parent octants, after detecting collision but before subdividing themselves further, would mark themselves as "non-navigable." This could make it so agents couldn't navigate to octants with navigable children, as the octants themselves would be considered inaccessible.
 
 To resolve this, I replaced my binary "navigable"/"non-navigable" system with an enum that categorized octants as either navigable, non-navigable, or as a parent. With this issue resolved, my dynamic obstacle handling was working!
 
@@ -58,7 +52,7 @@ Now, if a desired point is within a child octant, I access that as opposed to th
 
 The second change I needed to make was to my "GetNeighbors" function. As I originally was only functioning at the lowest level of subdivision, finding the neighbors of an octant was simply a matter of finding the adjacent octants in the octree array. Now, however, it was possible for neighboring octants to be within the same parent, or to be at different levels of subdivision compared to a given octant.
 
-Initially I spent some time attempting to address all the different edge cases one could encounter when trying to find the neighbors of a given octant, before realizing I had already prepared a simplier solution (EMDASH) finding neighboring octants by the location. I utilized my "GetOctantAtLocation" function, which already found the exact child that contained a point, so I could easily find octants within the same parent, as well as octants from different parents. I calculated an offset of the given octant's extent plus one, and then found the octants positioned at this offset in the six directions around the given octant.
+Initially I spent some time attempting to address all the different edge cases one could encounter when trying to find the neighbors of a given octant, before realizing I had already prepared a simplier solution &mdash; finding neighboring octants by the location. I utilized my "GetOctantAtLocation" function, which already found the exact child that contained a point, so I could easily find octants within the same parent, as well as octants from different parents. I calculated an offset of the given octant's extent plus one, and then found the octants positioned at this offset in the six directions around the given octant.
 
 However, this revealed another edge case, which I had read about in the [paper mentioned in my last blog post](http://www.gameaipro.com/GameAIPro3/GameAIPro3_Chapter21_3D_Flight_Navigation_Using_Sparse_Voxel_Octrees.pdf). When an octant's neighbor is at a higher level of subdivision, there are actually several neighboring octants. In the following illistration, the octant "13" has only one neighbor, "2", beneath it, but four neighbors, "6", "10", "12", and a fourth hidden one, to its right.
 
