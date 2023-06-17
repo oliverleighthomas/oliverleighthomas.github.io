@@ -9,36 +9,23 @@ Source code will become avalible once the project is complete.
 Summary
 =======
 
-Deckweaver: Decent into Chaos is a game currently in development from my capstone team, Get in the Box, on which I serve as lead programmer. It is a rougelite featuring deckbuilding gameplay
-elements, fastpaced combat, and Lovecraftian enemies for the player to face. Players must complete three levels, defeating three trials in each level, before they are able to face the final boss,
-and potentially save their world from the monsters invading it. However, the player won't get very far without becoming stronger &mdash; they must scour the environment for card chests so that
-they may customize their decks.
-
-Alongside my role as lead programmer, I also helped create the enemy AI for my team, as well as the interaction system and a game manager, used for stat-tracking, saving and reloading, and 
-storing avalible cards.
+Deckweaver: Decent into Chaos is a rougelite game currently under development by my capstone team, Get in the Box Studios, on which I serve as lead programmer. The game features deckbuilding gameplay
+elements, fast-paced combat, and Lovecraftian enemies for the player to face. To save their world from the invading monsters, players must complete three levels, each consisting of three shrines, and confront a final boss. However, the player won't get very far without becoming stronger &mdash; they must scour the environment for card chests so that they may customize their decks.
 
 Responsibilties
 ===============
 
 ### Leadership ###
 
-As the lead programmer for the team, a large portion of my responsibilities involved keeping the backend of our game running as smoothly as possible. I enforced deadlines for builds before
-presentations and other important due dates, maintained code standards to ensure quality across the entire code base, and conducted code reviews to confirm those standards were met. I was also
-in charge of programmers' sprint planning, and would assign tasks on a biweekly basis. This involved hours-estimates, and ensuring the programmers working under me were getting ample opprotunities
-to develop systems relevant to their career goals and interests.
+As the lead programmer for the team, a large portion of my responsibilities focused on ensuring the game functioned smoothly. This involved enforcing deadlines for builds prior to presentations and other important milestones, maintaining code standards to ensure a high-quality codebase, and conducting code reviews. I was also in charge of programmers' sprint planning, and would assign tasks on a biweekly basis. This involved making time-estimates for tasks, and ensuring the programmers were getting ample opprotunities to develop systems relevant to their career goals and interests.
 
-As Deckweaver is a systems-heavy game, it was imperitive those systems were well-designed and easy for designers to interface with. I would lead systems design meetings whenever a designer
-requested a new system to see how we could make it as quickly as possible, while still ensuring its flexibility and stability. One of these meetings lead to our very successful "card component"
-system, a system that allowed designers to create cards on the fly by using pre-made "components" that programmers had made. For example, if a designer wanted an ice explosion card, a poison explosion
-card, and a fire explosion card, all three cards could be made with one "explosion"-type component by changing the values. This allowed for designers to create cards without needing to overwhelm
-programmers with additional tasks.
+As Deckweaver is a systems-heavy game, it was imperitive those systems were well-designed and easy for designers to interface with. Prior to implementing a new system, I would lead back-end design meetings, where the programmers and I would decide upon a system design that could be done quickly, while still maintaining flexibility and stability. One of these meetings lead to our highly successful "card component" system. This system allowed designers to create cards on the fly by using pre-made "components" already prepared by programmers. For example, if a designer wanted an ice explosion card, a poison explosion card, and a fire explosion card, all three cards could be made with one "explosion"-type component by modifying the values. This allowed for designers to create cards without needing to overwhelm programmers with additional tasks.
 
 ### Programming ###
 
-Of course, I would not let my programmers have all the fun in-engine while I stood by the sidelines. Alongside my leadership duties, I developed the following:
-1. The game's AI. Our game features 4 unique enemies, 3 of which have their own secondary variant, and a boss. The non-boss enemies are managed by an AI-manager. The purpose of the manager
-was to keep enemies from all attacking at once, and to prioritize enemies in front of the player as opposed to behind. 
-2. The interaction system. Throughout our world, the player can interact with card chests to expand their deck, and shrines to instigate trials. 
-3. The game manager. This manager was in charge of several aspects of the game, such as stat-tracking and keeping a compendium of all avalible cards. 
+Alongside overseeing the team's progress, I also took an active role in the development of the game. I worked on the following:
+1. Enemy AI: Our game features four unique enemies, three of which have their own secondary variant, as well as a boss. The non-boss enemies are managed by an AI-manager, the purpose of the which was to help ensure the player was never too overwhelmed. Before an enemy is able to attack, it must request an "attack token" from the manager. There is a finite number of these tokens, and priority is given to enemies standing in front of the player. 
+2. Interaction System: Throughout our world, the player can interact with card chests to expand their deck, and shrines to instigate trials. This system includes not only an "interact" feature, but also a "hover" feature, allowing players to easily see what is and is not interactable within their environment.
+3. Game Manager: This manager was in charge of several aspects of the game. Its initial purpose was to keep a compedium of all cards avalible to the player, so that chests would know what they could and could not present. Not all cards within the game are accessible on the first run or within the first level. Later, this manager was further expanded to include stat-tracking. At the end of the game, players are presented with statistics about things such as how many enemies they've killed, how much damage they did, and the number of cards they picked up. Finally, this game manager is utilized in saving and reloading a game, and helping ensure a player maintains their card decks and power-ups between level transitions.
 
-More on these systems will be added to this page once the game is out, so please check back frequently!
+More details about systems will be added to this page upon the game's release, so please check back frequently!
