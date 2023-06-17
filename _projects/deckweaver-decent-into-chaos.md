@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Deckweaver: Decent into Chaos
+title: Deckweaver Decent into Chaos
 description: Get in the Box Studio's premier game
 ---
 
