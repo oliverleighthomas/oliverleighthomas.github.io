@@ -4,7 +4,7 @@ title: FIEA Game Engine
 description: An educational game engine
 ---
 
-View the source code [here](http://www.unexpected-vortices.com/sw/rippledoc/quick-markdown-example.html).
+View the source code [here](https://github.com/oliverleighthomas/FIEA-game-engine/).
 
 Summary
 =======
