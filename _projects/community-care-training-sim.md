@@ -5,7 +5,7 @@ description: A training sim made for the VHA.
 ---
 
 <video controls="">
-	<source src="https://www.youtube.com/embed/md8hy9OckxQ" type="video/mp4">
+	<source src="https://raw.githubusercontent.com/oliverleighthomas/oliverleighthomas.github.io/master/assets/videos/Full.mp4" type="video/mp4">
 	Your browser does not support the video tag.
 </video>
 
