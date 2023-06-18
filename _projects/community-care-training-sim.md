@@ -4,7 +4,9 @@ title: Community Care Training Sim
 description: A training sim made for the VHA.
 ---
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/md8hy9OckxQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<video width="320" height="240" controls>
+  <source src="assets/videos/Full.mp4" type="video/mp4">
+</video> 
 
 Source code for this project is not avalible as it now belongs to the VHA.
 
