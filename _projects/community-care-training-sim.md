@@ -4,7 +4,7 @@ title: Community Care Training Sim
 description: A training sim made for the VHA.
 ---
 
-<iframe width="560" height="315" src="https://raw.githubusercontent.com/oliverleighthomas/oliverleighthomas.github.io/master/assets/videos/Full.mp4"></iframe>
+<video controls="" src="https://www.youtube.com/embed/md8hy9OckxQ" type="video/mp4">Your browser does not support the video tag.</video>
 
 Source code for this project is not avalible as it now belongs to the VHA.
 
@@ -39,7 +39,7 @@ All dialogue was managed by a central "dialogue manager" that kept track of the 
 
 As this project was going to be handed off to the VHA for continued development, it was a priority of mine to ensure the dialogue system could easily be built upon. I created a JSON file format future developers could use to write their own scenarios. 
 
-![Test](https://i.imgur.com/MT8z8qq.png)
+[text](https://i.imgur.com/MT8z8qq.png)
 
 This JSON is automatically parsed at the beginning of the corresponding episode, and turned into a playable scenario. Developers only need modify JSON values to give player dialogue choices, create branching paths, or play different animations on paitent models. This way, developers do not need to spend time coding new scenarios individually, and development time can be spent on expanding different systems.
 
