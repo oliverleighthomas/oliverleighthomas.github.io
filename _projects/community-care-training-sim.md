@@ -42,7 +42,7 @@ All dialogue was managed by a central "dialogue manager" that kept track of the 
 
 As this project was going to be handed off to the VHA for continued development, it was a priority of mine to ensure the dialogue system could easily be built upon. I created a JSON file format future developers could use to write their own scenarios. 
 
-[text](https://i.imgur.com/MT8z8qq.png)
+![Test](https://i.imgur.com/MT8z8qq.png)
 
 This JSON is automatically parsed at the beginning of the corresponding episode, and turned into a playable scenario. Developers only need modify JSON values to give player dialogue choices, create branching paths, or play different animations on paitent models. This way, developers do not need to spend time coding new scenarios individually, and development time can be spent on expanding different systems.
 
