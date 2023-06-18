@@ -4,7 +4,7 @@ title: 6DOF Navmesh
 description: A 6DOF navmesh plugin for Unreal
 ---
 
-Source code can be found [here](http://www.unexpected-vortices.com/sw/rippledoc/quick-markdown-example.html).
+Source code can be found [here](https://github.com/oliverleighthomas/6DOF-Navmesh).
 
 Summary
 =======
