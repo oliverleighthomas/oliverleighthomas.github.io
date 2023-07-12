@@ -44,7 +44,7 @@ Testing revealed this change was incredibly helpful. Whereas it once took half a
 ![test](https://i.imgur.com/TBAk0kT.png)
 ![test](https://i.imgur.com/XXE2pmP.png)
 
-I was very excited about this speed improvement, and now users now have greater control over the number of iterations performed per tick. With this optimization complete, I could proceed to the next task—implementing steering.
+I was very excited about this speed improvement, and now users now have greater control over the number of iterations performed per tick. With this optimization complete, I could proceed to the next task &mdash; implementing steering.
 
 ### Steering
 
