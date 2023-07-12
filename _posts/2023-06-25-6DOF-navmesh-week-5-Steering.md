@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 6DOF Navmesh Week 6 - Steering
+title: 6DOF Navmesh Week 5 - Steering
 ---
 
 Hello, and welcome to another weekly update on the development of my six degree of freedom navmesh. This week has involved accomplishing several small goals, bringing me closer to the point where I feel confident deploying my navmesh in a production environment.
